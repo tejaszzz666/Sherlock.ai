@@ -1,0 +1,29 @@
+# ========================================
+# Sherlock.ai - Backend Dependencies
+# ========================================
+
+# Web Framework
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+pydantic==2.10.3
+python-multipart==0.0.20
+
+# Machine Learning
+torch==2.2.1
+torchvision==0.17.1
+numpy==1.26.4
+scikit-learn==1.6.1
+
+# Image & Video Processing
+opencv-python==4.10.0.84
+pillow==11.0.0
+
+# Utilities
+python-magic==0.4.27
+python-magic-bin==0.4.14; sys_platform == 'win32'
+
+# Visualization
+matplotlib==3.10.0
+
+# Environment Variables
+python-dotenv==1.0.1

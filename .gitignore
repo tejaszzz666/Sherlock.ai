@@ -1,0 +1,110 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Uploads and temporary files
+uploads/*
+!uploads/.gitkeep
+unknown_images/*
+!unknown_images/.gitkeep
+heatmaps/*
+!heatmaps/.gitkeep
+temp/
+tmp/
+
+# ML Models (if large)
+*.pth
+*.pt
+*.onnx
+*.pb
+# Uncomment if models should be versioned:
+# !ml/image_detector/saved_models/*.pth
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Frontend build
+frontend/build/
+frontend/dist/
+frontend/.vite/
+.cache
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Jupyter
+.ipynb_checkpoints
+
+# OS
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+
+# Docker
+.dockerignore
+
+# Backup
+.backup/
+*.backup
+*.bak
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Secrets
+secrets/
+*.pem
+*.key
+*.crt
