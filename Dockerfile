@@ -9,7 +9,7 @@ WORKDIR /app
 # CPU-only PyTorch first (much smaller), then the rest
 COPY backend/requirements.txt backend/requirements.txt
 RUN pip install --no-cache-dir torch==2.2.1 torchvision==0.17.1 \
-        --index-url https://download.pytorch.org/whl/cpu \
+        --extra-index-url https://download.pytorch.org/whl/cpu \
     && pip install --no-cache-dir -r backend/requirements.txt
 
 COPY backend backend
