@@ -18,15 +18,20 @@ class Settings:
     
     # ============ Server Config ============
     BACKEND_HOST: str = os.getenv("BACKEND_HOST", "127.0.0.1")
-    BACKEND_PORT: int = int(os.getenv("BACKEND_PORT", "8000"))
+    # Render (and most PaaS) inject PORT; fall back to BACKEND_PORT for local/HF
+    BACKEND_PORT: int = int(os.getenv("PORT") or os.getenv("BACKEND_PORT", "8000"))
     BACKEND_RELOAD: bool = os.getenv("BACKEND_RELOAD", "true").lower() == "true"
     ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
     
     # ============ CORS ============
-    CORS_ORIGINS: List[str] = os.getenv(
-        "CORS_ORIGINS",
-        "http://localhost:3000,http://localhost:5173,http://127.0.0.1:3000,http://127.0.0.1:5173"
-    ).split(",")
+    CORS_ORIGINS: List[str] = [
+        o.strip().rstrip("/")
+        for o in os.getenv(
+            "CORS_ORIGINS",
+            "http://localhost:3000,http://localhost:5173,http://127.0.0.1:3000,http://127.0.0.1:5173"
+        ).split(",")
+        if o.strip()
+    ]
     
     # ============ Upload Limits ============
     MAX_IMAGE_SIZE_MB: int = int(os.getenv("MAX_IMAGE_SIZE_MB", "10"))
