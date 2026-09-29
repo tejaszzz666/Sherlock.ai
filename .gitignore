@@ -60,7 +60,7 @@ tmp/
 *.onnx
 *.pb
 # Uncomment if models should be versioned:
-# !ml/image_detector/saved_models/*.pth
+!ml/image_detector/saved_models/*.pth
 
 # Node
 node_modules/
